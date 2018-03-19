@@ -10,14 +10,27 @@ import UIKit
 
 class ToDoListViewController: UITableViewController
 {
-    var itemArray = ["Play Kingdom Hearts", "Go out eating", "Learn Programming", "Watch Stargate Atlantis"]
+    var itemArray = [Item]()
+    
     let defaults = UserDefaults.standard
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        if let items = defaults.array(forKey: "ToDoListArray") as? [String]
+        let newItem = Item()
+        newItem.title = "Learn Swift"
+        itemArray.append(newItem)
+        
+        let newItem2 = Item()
+        newItem2.title = "Play a game"
+        itemArray.append(newItem2)
+        
+        let newItem3 = Item()
+        newItem3.title = "Watch a video"
+        itemArray.append(newItem3)
+        
+        if let items = defaults.array(forKey: "ToDoListArray") as? [Item]
         {
             itemArray = items
         }
@@ -35,8 +48,10 @@ class ToDoListViewController: UITableViewController
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoItemCell", for: indexPath)
+        let item = itemArray[indexPath.row]
         
-        cell.textLabel?.text = itemArray[indexPath.row]
+        cell.textLabel?.text = item.title
+        cell.accessoryType = item.done ? .checkmark : .none
         
         return cell
     }
@@ -47,15 +62,9 @@ class ToDoListViewController: UITableViewController
     {
         //print(itemArray[indexPath.row])
         
-        if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark
-        {
-            tableView.cellForRow(at: indexPath)?.accessoryType = .none
-        }
-        else
-        {
-            tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
-        }
+        itemArray[indexPath.row].done = !itemArray[indexPath.row].done
         
+        tableView.reloadData()
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
@@ -73,7 +82,10 @@ class ToDoListViewController: UITableViewController
             
             if let item = textField.text
             {
-                self.itemArray.append(item)
+                let newItem = Item()
+                newItem.title = item
+                
+                self.itemArray.append(newItem)
                 self.defaults.set(self.itemArray, forKey: "ToDoListArray")
                 self.tableView.reloadData()
             }
