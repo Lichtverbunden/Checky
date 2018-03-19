@@ -10,11 +10,12 @@ import UIKit
 
 class ToDoListViewController: UITableViewController
 {
-    let itemArray = ["Play Kingdom Hearts", "Go out eating", "Learn Programming", "Watch Stargate Atlantis"]
+    var itemArray = ["Play Kingdom Hearts", "Go out eating", "Learn Programming", "Watch Stargate Atlantis"]
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        tableView.reloadData()
     }
 
     //MARK - TableViewDataSource Methods
@@ -51,6 +52,48 @@ class ToDoListViewController: UITableViewController
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
+    //Mark - Add New Items
+    
+    @IBAction func addButtonPressed(_ sender: UIBarButtonItem)
+    {
+        var textField = UITextField()
+        
+        let alert = UIAlertController(title: "Add New Checky Item", message: "", preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Add Item", style: .default)
+        {(action) in
+            //What will happen after tapping button
+            
+            if let item = textField.text
+            {
+                self.itemArray.append(item)
+                self.tableView.reloadData()
+            }
+        }
+        
+        action.isEnabled = false
+        
+        alert.addTextField
+        {(alertTextField) in
+            alertTextField.placeholder = "Create a new item"
+
+            NotificationCenter.default.addObserver(forName: .UITextFieldTextDidChange, object: alertTextField, queue: OperationQueue.main, using:
+                {_ in
+                    let textCount = alertTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines).count ?? 0
+                    let textIsNotEmpty = textCount > 0
+                    
+                    action.isEnabled = textIsNotEmpty
+                })
+            
+            textField = alertTextField
+        }
+        
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
+    }
+    
+    
     
 }
 
