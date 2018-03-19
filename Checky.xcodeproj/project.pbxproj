@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BE2DE8D82056B74700A74EFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2DE8D72056B74700A74EFA /* AppDelegate.swift */; };
-		BE2DE8DA2056B74700A74EFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2DE8D92056B74700A74EFA /* ViewController.swift */; };
+		BE2DE8DA2056B74700A74EFA /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2DE8D92056B74700A74EFA /* ToDoListViewController.swift */; };
 		BE2DE8DD2056B74700A74EFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2DE8DB2056B74700A74EFA /* Main.storyboard */; };
 		BE2DE8DF2056B74700A74EFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE2DE8DE2056B74700A74EFA /* Assets.xcassets */; };
 		BE2DE8E22056B74700A74EFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2DE8E02056B74700A74EFA /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		BE2DE8D42056B74700A74EFA /* Checky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2DE8D72056B74700A74EFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BE2DE8D92056B74700A74EFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BE2DE8D92056B74700A74EFA /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 		BE2DE8DC2056B74700A74EFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE2DE8DE2056B74700A74EFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE2DE8E12056B74700A74EFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +35,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE02AB452056B8EF00E069AF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BE2DE8D72056B74700A74EFA /* AppDelegate.swift */,
+				BE2DE8D92056B74700A74EFA /* ToDoListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BE02AB462056B90900E069AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BE2DE8E02056B74700A74EFA /* LaunchScreen.storyboard */,
+				BE2DE8DB2056B74700A74EFA /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BE02AB472056B91D00E069AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE02AB482056B92300E069AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE2DE8DE2056B74700A74EFA /* Assets.xcassets */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		BE2DE8CB2056B74700A74EFA = {
 			isa = PBXGroup;
 			children = (
@@ -54,11 +87,10 @@
 		BE2DE8D62056B74700A74EFA /* Checky */ = {
 			isa = PBXGroup;
 			children = (
-				BE2DE8D72056B74700A74EFA /* AppDelegate.swift */,
-				BE2DE8D92056B74700A74EFA /* ViewController.swift */,
-				BE2DE8DB2056B74700A74EFA /* Main.storyboard */,
-				BE2DE8DE2056B74700A74EFA /* Assets.xcassets */,
-				BE2DE8E02056B74700A74EFA /* LaunchScreen.storyboard */,
+				BE02AB472056B91D00E069AF /* Model */,
+				BE02AB462056B90900E069AF /* View */,
+				BE02AB452056B8EF00E069AF /* Controller */,
+				BE02AB482056B92300E069AF /* Supporting Files */,
 				BE2DE8E32056B74700A74EFA /* Info.plist */,
 			);
 			path = Checky;
@@ -136,7 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE2DE8DA2056B74700A74EFA /* ViewController.swift in Sources */,
+				BE2DE8DA2056B74700A74EFA /* ToDoListViewController.swift in Sources */,
 				BE2DE8D82056B74700A74EFA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
