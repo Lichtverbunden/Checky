@@ -12,7 +12,8 @@
 		BE2DE8DD2056B74700A74EFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2DE8DB2056B74700A74EFA /* Main.storyboard */; };
 		BE2DE8DF2056B74700A74EFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE2DE8DE2056B74700A74EFA /* Assets.xcassets */; };
 		BE2DE8E22056B74700A74EFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2DE8E02056B74700A74EFA /* LaunchScreen.storyboard */; };
-		BE4BA1FE206055F100F980F4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4BA1FD206055F100F980F4 /* Item.swift */; };
+		BE8060CC206A77BD0035D703 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8060CB206A77BD0035D703 /* CategoryViewController.swift */; };
+		BE8C5D7E20682BDF0072AD7B /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE8C5D7C20682BDF0072AD7B /* DataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +24,8 @@
 		BE2DE8DE2056B74700A74EFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE2DE8E12056B74700A74EFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE2DE8E32056B74700A74EFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BE4BA1FD206055F100F980F4 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		BE8060CB206A77BD0035D703 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		BE8C5D7D20682BDF0072AD7B /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +42,7 @@
 		BE02AB452056B8EF00E069AF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BE2DE8D72056B74700A74EFA /* AppDelegate.swift */,
+				BE8060CB206A77BD0035D703 /* CategoryViewController.swift */,
 				BE2DE8D92056B74700A74EFA /* ToDoListViewController.swift */,
 			);
 			path = Controller;
@@ -58,7 +60,7 @@
 		BE02AB472056B91D00E069AF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BE4BA1FD206055F100F980F4 /* Item.swift */,
+				BE8C5D7C20682BDF0072AD7B /* DataModel.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -90,6 +92,7 @@
 		BE2DE8D62056B74700A74EFA /* Checky */ = {
 			isa = PBXGroup;
 			children = (
+				BE2DE8D72056B74700A74EFA /* AppDelegate.swift */,
 				BE02AB472056B91D00E069AF /* Model */,
 				BE02AB462056B90900E069AF /* View */,
 				BE02AB452056B8EF00E069AF /* Controller */,
@@ -171,8 +174,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE8060CC206A77BD0035D703 /* CategoryViewController.swift in Sources */,
 				BE2DE8DA2056B74700A74EFA /* ToDoListViewController.swift in Sources */,
-				BE4BA1FE206055F100F980F4 /* Item.swift in Sources */,
+				BE8C5D7E20682BDF0072AD7B /* DataModel.xcdatamodeld in Sources */,
 				BE2DE8D82056B74700A74EFA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +362,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BE8C5D7C20682BDF0072AD7B /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BE8C5D7D20682BDF0072AD7B /* DataModel.xcdatamodel */,
+			);
+			currentVersion = BE8C5D7D20682BDF0072AD7B /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BE2DE8CC2056B74700A74EFA /* Project object */;
 }
