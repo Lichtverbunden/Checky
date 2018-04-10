@@ -8,18 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		0F2F0D5BEF02041FFB25DF06 /* Pods_Checky.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D7CF4AF3CFAEFBBA3E3437E /* Pods_Checky.framework */; };
+		BE1C546D2072D81E00CB8D2D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1C546C2072D81E00CB8D2D /* Item.swift */; };
+		BE1C546F2072D83400CB8D2D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1C546E2072D83400CB8D2D /* Category.swift */; };
 		BE2DE8D82056B74700A74EFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2DE8D72056B74700A74EFA /* AppDelegate.swift */; };
 		BE2DE8DA2056B74700A74EFA /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2DE8D92056B74700A74EFA /* ToDoListViewController.swift */; };
 		BE2DE8DD2056B74700A74EFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2DE8DB2056B74700A74EFA /* Main.storyboard */; };
 		BE2DE8DF2056B74700A74EFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE2DE8DE2056B74700A74EFA /* Assets.xcassets */; };
 		BE2DE8E22056B74700A74EFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2DE8E02056B74700A74EFA /* LaunchScreen.storyboard */; };
 		BE8060CC206A77BD0035D703 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8060CB206A77BD0035D703 /* CategoryViewController.swift */; };
-		BE8C5D7E20682BDF0072AD7B /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BE8C5D7C20682BDF0072AD7B /* DataModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2F16350D2A42216654D18CF7 /* Pods-Checky.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Checky.release.xcconfig"; path = "Pods/Target Support Files/Pods-Checky/Pods-Checky.release.xcconfig"; sourceTree = "<group>"; };
 		6D7CF4AF3CFAEFBBA3E3437E /* Pods_Checky.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Checky.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE1C546C2072D81E00CB8D2D /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		BE1C546E2072D83400CB8D2D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		BE2DE8D42056B74700A74EFA /* Checky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2DE8D72056B74700A74EFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE2DE8D92056B74700A74EFA /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
@@ -28,7 +31,6 @@
 		BE2DE8E12056B74700A74EFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE2DE8E32056B74700A74EFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE8060CB206A77BD0035D703 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
-		BE8C5D7D20682BDF0072AD7B /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		FD2A6C81D9B125B8B276E6EB /* Pods-Checky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Checky.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Checky/Pods-Checky.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,7 +84,8 @@
 		BE02AB472056B91D00E069AF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BE8C5D7C20682BDF0072AD7B /* DataModel.xcdatamodeld */,
+				BE1C546E2072D83400CB8D2D /* Category.swift */,
+				BE1C546C2072D81E00CB8D2D /* Item.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -257,10 +260,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE1C546D2072D81E00CB8D2D /* Item.swift in Sources */,
 				BE8060CC206A77BD0035D703 /* CategoryViewController.swift in Sources */,
 				BE2DE8DA2056B74700A74EFA /* ToDoListViewController.swift in Sources */,
-				BE8C5D7E20682BDF0072AD7B /* DataModel.xcdatamodeld in Sources */,
 				BE2DE8D82056B74700A74EFA /* AppDelegate.swift in Sources */,
+				BE1C546F2072D83400CB8D2D /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +311,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -364,6 +369,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -447,19 +453,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		BE8C5D7C20682BDF0072AD7B /* DataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				BE8C5D7D20682BDF0072AD7B /* DataModel.xcdatamodel */,
-			);
-			currentVersion = BE8C5D7D20682BDF0072AD7B /* DataModel.xcdatamodel */;
-			path = DataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = BE2DE8CC2056B74700A74EFA /* Project object */;
 }
